@@ -22,9 +22,9 @@ public class Main {
             + type(doubleA) + " равно " + doubleA);
 
         // Task 2
-        float floatB = 27.12f;
+        double floatB = 27.12;
         long longB = 987_678_965_549L;
-        float floatC = 2.786f;
+        double floatC = 2.786;
         short shortB = 569;
         short shortC = -159;
         short shortD = 27897;
@@ -71,19 +71,24 @@ public class Main {
                 + " штук бутылок");
 
         // Task 5
-        byte whiteJar = 120;
-        short brownJar = (short)(whiteJar * 2);
-        byte classsrooms = (byte)(whiteJar / 2);
+        byte jar = 120;
+        byte classsrooms = (byte)(jar / (2 + 4));
+        byte whiteJar = (byte) (classsrooms * 2);
+        byte brownJar = (byte) (classsrooms * 4);
         System.out.println();
         System.out.println("В школе, где " + classsrooms + " классов, нужно " + whiteJar +
                 " банок белой краски и " + brownJar + " банок коричневой краски");
 
         // Task 6
-        byte banana = 80;
-        byte milk = 105;
-        byte iceCream = 100;
-        byte egg = 70;
-        short breakfastG = (short)(banana * 5 + milk * 2 + iceCream * 2 + egg * 4);
+        byte banana = 5;
+        byte weightBanana = 80;
+        byte milk = 2;
+        byte weigthMilk = 105;
+        byte iceCream = 2;
+        byte weightIceCream = 100;
+        byte egg = 4;
+        byte weightEgg = 70;
+        short breakfastG = (short)(banana * weightBanana + milk * weigthMilk + iceCream * weightIceCream + egg * weightEgg);
         float breakfastKg = (float) breakfastG / 1000;
         System.out.printf("%nЗавтрак для спортсменов весит %dг или %.3fкг%n", breakfastG, breakfastKg);
 
