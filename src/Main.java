@@ -8,7 +8,6 @@ public class Main {
         long longA = 5L;
         float floatA= 3.5f;
         double doubleA = 1.5E8;
-
         System.out.println("Значение переменной byteA с типом "
             + type(byteA) + " равно " + byteA);
         System.out.println("Значение переменной shortA с типом "
@@ -30,18 +29,35 @@ public class Main {
         short shortC = -159;
         short shortD = 27897;
         byte byteB = 67;
+        System.out.println();
+        System.out.println("Значение переменной floatB с типом "
+                + type(floatB) + " равно " + floatB);
+        System.out.println("Значение переменной longB с типом "
+                + type(longB) + " равно " + longB);
+        System.out.println("Значение переменной floatC с типом "
+                + type(floatC) + " равно " + floatC);
+        System.out.println("Значение переменной shortB с типом "
+                + type(shortB) + " равно " + shortB);
+        System.out.println("Значение переменной shortC с типом "
+                + type(shortC) + " равно " + shortC);
+        System.out.println("Значение переменной shortD с типом "
+                + type(shortD) + " равно " + shortD);
+        System.out.println("Значение переменной doubleA с типом "
+                + type(byteB) + " равно " + byteB);
 
         // Task 3
         byte lp = 23;
         byte as = 27;
         byte ea = 30;
         byte sheetsPaper = (byte) (480 / (lp + as + ea));
+        System.out.println();
         System.out.println("На каждого ученика рассчитано "
                 + sheetsPaper + " листов бумаги");
 
         // Task 4
         byte bottlesInMin = 16 / 2;
         long bottles = 20 * bottlesInMin;
+        System.out.println();
         System.out.println("За 20 минут машина произвела " + bottles
                 + " штук бутылок");
         bottles = 24 * 60 * bottlesInMin;
@@ -58,6 +74,7 @@ public class Main {
         byte whiteJar = 120;
         short brownJar = (short)(whiteJar * 2);
         byte classsrooms = (byte)(whiteJar / 2);
+        System.out.println();
         System.out.println("В школе, где " + classsrooms + " классов, нужно " + whiteJar +
                 " банок белой краски и " + brownJar + " банок коричневой краски");
 
@@ -68,7 +85,33 @@ public class Main {
         byte egg = 70;
         short breakfastG = (short)(banana * 5 + milk * 2 + iceCream * 2 + egg * 4);
         float breakfastKg = (float) breakfastG / 1000;
-        System.out.printf("Завтрак для спортсменов весит %dг или %.3fкг", breakfastG, breakfastKg);
+        System.out.printf("%nЗавтрак для спортсменов весит %dг или %.3fкг%n", breakfastG, breakfastKg);
+
+        // Task 7
+        short weight = 7000;
+        short minLoss = 250;
+        short maxLoss = 500;
+        byte maxTime = (byte)(weight / minLoss);
+        byte minTime = (byte)(weight / maxLoss);
+        System.out.printf("%nПри похудении на %dг в день, потребуется - %d дней чтобы сбросить 7кг веса.%n",
+                minLoss, maxTime);
+        System.out.printf("При похудении на %dг в день, потребуется - %d дней чтобы сбросить 7кг веса.%n",
+                maxLoss, minTime);
+        System.out.printf("Среднее время похудения - %d день%n", (maxTime + minTime) / 2);
+
+        // Task 8
+        // Использовал массивы и цикл, так как это логично.
+        String[] name = new String[] {"Маша", "Денис", "Крестина"};
+        int[] salary = new int[] {67_760, 83_690, 76_230};
+        int[] newSalary = new int[3];
+        int[] dIncome = new int[3];
+        System.out.println();
+        for(byte i = 0; i < 3; i++) {
+            newSalary[i] = (int)(salary[i] * 1.1);
+            dIncome[i] = (int)(salary[i] * 0.1 * 12);
+            System.out.printf("%s теперь получает %d рублей. Годовой доход вырос на %d рублей.%n",
+                    name[i], newSalary[i], dIncome[i]);
+        }
 
     }
 
